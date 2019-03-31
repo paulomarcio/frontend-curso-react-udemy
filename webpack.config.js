@@ -18,7 +18,7 @@ module.exports = {
         }
     },
     plugins: [
-        ExtractTextPlugin('app.css')
+        new ExtractTextPlugin('app.css')
     ],
     module: {
         loaders:[{
