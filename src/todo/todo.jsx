@@ -25,7 +25,7 @@ export default class Todo extends Component {
     }
 
     refresh(description = ''){
-        const search = description ? `&description__regex=/^${description}/i` : ''
+        const search = description ? `&description__regex=/${description}/i` : ''
         axios.get(`${URL}?sort=-createdAt${search}`)
             .then(resp => this.setState({...this.state, description: description, list: resp.data}))
     }
